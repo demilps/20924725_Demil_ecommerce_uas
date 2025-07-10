@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Candy Luxe Watches</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ffeef0, #fff5f7);
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+    }
+
+    /* Welcome Section */
+    .welcome {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .welcome h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      color: #E8B4A0;
+      margin-bottom: 2rem;
+    }
+
+    .open-btn {
+      background-color: #E8B4A0;
+      color: white;
+      padding: 1rem 2.5rem;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .open-btn:hover {
+      background-color: #D4A574;
+      transform: scale(1.05);
+    }
+
+    .contact-info {
+      font-size: 1rem;
+      background-color: white;
+      color: #444;
+      padding: 0.8rem 1.5rem;
+      border-radius: 15px;
+      position: absolute;
+      bottom: 2rem;
+      text-align: center;
+      line-height: 1.5;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .contact-info p {
+      margin: 0.2rem 0;
+    }
+
+    /* Home Section */
+    .home-section {
+      display: none;
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2.title {
+      font-family: 'Playfair Display', serif;
+      color: #D4A574;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-image {
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .product-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: #D4A574;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-description {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+
+    .cart-icon-btn {
+      background-color: #E8B4A0;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .cart-icon-btn:hover {
+      background-color: #D4A574;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .welcome h1 {
+        font-size: 2.2rem;
+      }
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- WELCOME PAGE -->
+  <div class="welcome" id="welcomeSection">
+    <h1>Welcome in Candy Luxe Watches</h1>
+    <button class="open-btn" onclick="openHome()">Open</button>
+
+    <div class="contact-info">
+      <p>Email: info@candyluxewatches.com</p>
+      <p>Phone: +62 888-0183-9427</p>
+      <p>Address: Jl. Soekarno Hatta No. 108</p>
+    </div>
+  </div>
+
+  <!-- HOME PAGE -->
+  <div class="home-section" id="homeSection">
+    <h2 class="title">Our Products</h2>
+    <div class="product-grid">
+      <!-- Produk 1 -->
+      <div class="product-card">
+        <img src="images/watch1.jpeg" alt="Watch 1" class="product-image">
+        <div class="product-name">Rose Gold Minimalist</div>
+        <div class="product-description">Elegant rose gold with minimalist leather design.</div>
+        <a href="product1.html"><button class="cart-icon-btn">🛒</button></a>
+      </div>
+
+      <!-- Produk 2 -->
+      <div class="product-card">
+        <img src="images/watch2.jpeg" alt="Watch 2" class="product-image">
+        <div class="product-name">Pink Leather Strap</div>
+        <div class="product-description">Feminine and sweet pink leather with rose gold.</div>
+        <a href="product2.html"><button class="cart-icon-btn">🛒</button></a>
+      </div>
+
+      <!-- Produk 3 -->
+      <div class="product-card">
+        <img src="images/watch3.jpeg" alt="Watch 3" class="product-image">
+        <div class="product-name">Diamond Accent</div>
+        <div class="product-description">Luxurious mesh band and sparkling diamond dial.</div>
+        <a href="product3.html"><button class="cart-icon-btn">🛒</button></a>
+      </div>
+
+      <!-- Produk 4 -->
+      <div class="product-card">
+        <img src="images/watch4.jpeg" alt="Watch 4" class="product-image">
+        <div class="product-name">Mesh Band Rose Gold</div>
+        <div class="product-description">Modern and chic with magnetic mesh band clasp.</div>
+        <a href="product4.html"><button class="cart-icon-btn">🛒</button></a>
+      </div>
+
+      <!-- Produk 5 -->
+      <div class="product-card">
+        <img src="images/watch5.jpeg" alt="Watch 5" class="product-image">
+        <div class="product-name">Pink Ceramic</div>
+        <div class="product-description">Stylish, strong, and scratch-resistant ceramic body.</div>
+        <a href="product5.html"><button class="cart-icon-btn">🛒</button></a>
+      </div>
+
+      <!-- Produk 6 -->
+      <div class="product-card">
+        <img src="images/watch6.jpeg" alt="Watch 6" class="product-image">
+        <div class="product-name">Crystal Bezel</div>
+        <div class="product-description">Glamorous and shiny rose gold with crystal bezel.</div>
+        <a href="product6.html"><button class="cart-icon-btn">🛒</button></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    function openHome() {
+      document.getElementById('welcomeSection').style.display = 'none';
+      document.getElementById('homeSection').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
